@@ -1,0 +1,13 @@
+# Visual Studio 2013
+*.sdf
+*.opensdf
+*.sln
+*.suo
+*.vcxproj
+*.filters
+imtalk/
+
+# base
+base/test_main.cpp
+base/test_make.sh
+base/test_clean.sh
