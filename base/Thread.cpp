@@ -1,8 +1,8 @@
 /*
-* 线程封装类
-* @author: luoxn28
-* @create date: 2016.2.15
-*/
+ * 线程封装类
+ * @author: luoxn28
+ * @create date: 2016.2.15
+ */
 
 #include "Thread.h"
 
