@@ -82,3 +82,24 @@ int CRWLock::TryWlock()
 {
 	return pthread_rwlock_trywrlock(&rwlock_);
 }
+
+
+CAutoRWLock::CAutoRWLock(CRWLock *prwlock, bool is_rlock)
+{
+	prwlock_ = prwlock;
+	if (prwlock_) {
+		if (is_rlock) {
+			prwlock_->Rlock();
+		}
+		else {
+			prwlock_->Wlock();
+		}
+	}
+}
+
+CAutoRWLock::~CAutoRWLock()
+{
+	if (prwlock_) {
+		prwlock_->Unlock();
+	}
+}

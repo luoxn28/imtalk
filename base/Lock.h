@@ -50,4 +50,14 @@ private:
 	pthread_rwlock_t rwlock_;
 };
 
+class CAutoRWLock
+{
+public:
+	CAutoRWLock(CRWLock *prwlock, bool is_rlock = true);
+	virtual ~CAutoRWLock();
+
+private:
+	CRWLock *prwlock_;
+};
+
 #endif
