@@ -1,3 +1,8 @@
+/*
+ * @brief: thread pool
+ * @author: luoxn28
+ * @date: 2016.2.17
+ */
 #include "ThreadPool.h"
 
 #include <pthread.h>
